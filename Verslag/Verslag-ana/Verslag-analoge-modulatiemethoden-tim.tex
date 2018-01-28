@@ -1,0 +1,169 @@
+\documentclass[11pt,a4paper]{article}
+
+%used packages
+\usepackage{graphicx}
+\usepackage[dutch]{babel} 
+\usepackage{scrextend}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xcolor}
+\usepackage{listings}
+
+%Document settings
+\raggedbottom
+\graphicspath{ {images/} }
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+%Custom commando's
+\newcommand\litem[1]{\item{\bfseries#1.\space}}
+\newcommand\tabelkleur{\rowcolor[HTML]{FFCC67}}
+
+%Custum Variables
+\def\auteur{Tim van Broekhoven}
+\def\titel{Verslag analoge modulatiemethoden} 
+\def\datum{\today}
+\def\versie{0.1}
+\def\status{concept}
+\def\subtitel{}
+\def\tabelkleur{FFCC67}
+
+%Settings for Footer and Header
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\subtitel}
+\lhead{\titel}
+\lfoot{\datum}
+\rfoot{Pagina \thepage \hspace{1pt} /  \pageref{LastPage}}
+
+%Settings for document spacing
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+%Settings for code sinppeds
+\lstset{basicstyle=\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{red},
+	keywordstyle=\color{blue}
+}
+
+\begin{document}
+	
+	\begin{titlepage}	
+		\centering
+		{\huge\bfseries \titel \par}
+		{\huge\itshape \subtitel \par}
+		\vspace{1cm}
+		{\Large\itshape \auteur \par}
+		\vspace{1cm}
+		{\Large\itshape versie \versie\par}	
+		\vfill
+		\includegraphics[width=0.30\textwidth]{hr-logo}\par\vspace{1cm}
+		Vak:\par
+		PTE01
+		
+		\vfill
+		{\large \datum \par}
+	\end{titlepage}
+	
+	\tableofcontents
+	
+	\clearpage
+	
+	\listoffigures
+	
+	\clearpage
+	\listoftables
+	
+	\clearpage
+	
+	\section{Versiehistorie}
+	\begin{table}[H]
+		\centering
+		\label{Versiehistorie}
+		\begin{tabular}{|p{1cm}|p{2cm}|p{6cm}|p{2cm}|}
+			\hline
+			\rowcolor[HTML]{FFCC67}
+			\textbf{Versie} & \textbf{Datum} & \textbf{Wijzigingen} & \textbf{Auteur} \\ \hline
+			0.1    & 28-01-2018 & Opmaak    & Tim \\ \hline
+			0.2	   & ...		& ...  	&  \\ \hline
+			&       &             &        \\ \hline
+		\end{tabular}
+		\caption {Versiehistorie} \label{tab:title} 
+	\end{table}	
+
+	\begin{figure}[H]
+		\includegraphics[width=1.0\textwidth]{placeimg}\par\vspace{1cm}
+		\caption{placeimg}
+		\label{fig:length_eight_mouse}
+	\end{figure}
+	\clearpage
+	
+	\section{Inleiding}
+		\subsection{Probleemstelling}
+		\subsection{Doelstelling}
+		\subsection{Opdrachtomschrijving}
+	\clearpage
+
+%----------------------------------------------------------------------------------------
+%	AM Modulatie
+%----------------------------------------------------------------------------------------	
+	\section{AM Modulatie}
+		\subsection{Ontwerpen}
+			\subsubsection{Wiskundige afleiding}
+			 	\[ S_{AM} = (V_x + m(t)) * c(t) \]
+
+			 \subsubsection{Simulatie}
+			 	scoopbeelden + frequentie spectra
+		
+		\subsection{Meetresultaten} 
+			\subsubsection{Meetopstelling}
+				Hoe is gemeten?
+			\subsubsection{Signaalmetingen}
+				(scopebeelden) bij elke signaalbewerking +
+frequentiespectrum + tabel vergelijking meetresultaten
+		
+		\subsection{Conclusie}
+			\begin{itemize}
+				\item Kloppen de gemeten waarden met de berekende waarden
+				\item Waarom wel/niet?
+				\item Voor/nadelen van de verschillende schakelingen
+				\item Aanbevelingen voor evt. verbeteringen
+			\end{itemize}
+	\clearpage
+
+%----------------------------------------------------------------------------------------
+%	AM Demodulatie
+%------------------------------------------------------------------------------------			
+	\section{AM Demodulatie}
+		\subsection{Ontwerpen}
+			\subsubsection{Wiskundige afleiding}
+			 	
+			 \subsubsection{Simulatie}
+			 	scoopbeelden + frequentie spectra
+		
+		\subsection{Meetresultaten} 
+			\subsubsection{Meetopstelling}
+				Hoe is gemeten?
+			\subsubsection{Signaalmetingen}
+				(scopebeelden) bij elke signaalbewerking +
+frequentiespectrum + tabel vergelijking meetresultaten
+		
+		\subsection{Conclusie}
+			\begin{itemize}
+				\item Kloppen de gemeten waarden met de berekende waarden
+				\item Waarom wel/niet?
+				\item Voor/nadelen van de verschillende schakelingen
+				\item Aanbevelingen voor evt. verbeteringen
+			\end{itemize}
+	
+	\bibliographystyle{plain}
+	\bibliography{bibligraphy}
+
+\end{document}
