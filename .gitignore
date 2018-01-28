@@ -1,6 +1,15 @@
 #Eigen ignore files
 .DS_Store
 
+# latex
+.aux
+.lof
+.log
+.lot
+.gz
+.pdf
+.toc
+
 # built application files
 *.apk
 *.ap_
