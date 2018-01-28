@@ -1,15 +1,29 @@
-#Eigen ignore files
-.DS_Store
+#latex files
+*.aux
+*.idx
+*.ilg
+*.ind
+*.log
+*.pdf
+*.toc
+*.bbl
+*.gz
+*.synctex
+*.blg
+*.lof
+*.lot
+*.out
+*.bak
+*TSWLatexianTemp
 
-# latex
-.aux
-.lof
-.log
-.lot
-.gz
-.pdf
-.toc
+#bestanden mac
+*.DS_Store
 
+#bestanden windows
+*.ini
+
+#C bestanden
+*.o
 # built application files
 *.apk
 *.ap_
