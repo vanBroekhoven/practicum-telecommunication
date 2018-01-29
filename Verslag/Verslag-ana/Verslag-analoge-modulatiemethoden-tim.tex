@@ -116,8 +116,38 @@
 %----------------------------------------------------------------------------------------	
 	\section{AM Modulatie}
 		\subsection{Ontwerpen}
+			
+			\subsubsection{Wiskundige model}
 			\subsubsection{Wiskundige afleiding}
-			 	\[ S_{AM} = (V_x + m(t)) * c(t) \]
+Draaggolfsignaal: \[c(t) = A_c*sin(\omega_ct)\]	
+
+Informatiesignaal: \[m(t) = A_m*sin(\omega_mt)\]
+	
+Amplitude gemoduleerd signaal: \[ S_{AM} = (V_x + m(t)) * c(t) \]
+
+\[S_{AM} = V_x * c(t) + m(t) * c(t) \]
+
+\[S_{AM} = V_x * A_c*sin(\omega_ct) + A_c*sins(\omega_ct) * A_m*sin(\omega_mt) \]
+
+\[S_{AM} = V_x * A_c*sin(\omega_ct) + \frac{A_m * A_c}{2} * (cos(\omega_c - \omega_mt) - cos(\omega_c + \omega_mt)) \]
+
+			\subsubsection{Frequenties (in tabel) en spectrum (grafiek)}
+			\subsubsection{Gekozen amplitudes en frequenties}
+Draaggolfsignaal: \[c(t) = 6*sin(\20kt)\]
+
+Informatiesignaal: \[m(t) = 3*sin(\200_mt)\]
+
+Offset: \[V_x = 1V \]
+
+Amplitude gemoduleerd signaal: \[ S_{AM} = (V_x + m(t)) * c(t) \]
+
+\[S_{AM} = V_x * c(t) + m(t) * c(t) \]
+
+\[S_{AM} = V_x * 6*sin(20kt) + 6*sins(20kt) * 3*sin(200t) \]
+
+\[S_{AM} = V_x * 6*sin(20kt) + \frac{3 * 6}{2} * (cos(20k - 200t) - cos(20k + 200)) \]
+
+\[S_{AM} = V_x * 6*sin(20kt) + 9 * (cos(19800t
 
 			 \subsubsection{Simulatie}
 			 	scoopbeelden + frequentie spectra
